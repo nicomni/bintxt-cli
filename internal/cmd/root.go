@@ -11,5 +11,6 @@ func NewCmdRoot(ios *iostreams.IOStreams) *cobra.Command {
 	}
 
 	cmd.AddCommand(NewCmdEncode(ios))
+	cmd.AddCommand(NewCmdDecode(ios))
 	return cmd
 }
