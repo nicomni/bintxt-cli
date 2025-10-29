@@ -5,6 +5,7 @@ import (
 	"io"
 	"strings"
 
+	"github.com/MakeNowJust/heredoc"
 	"github.com/nicomni/bintxt-cli/internal/bintxt"
 	"github.com/nicomni/bintxt-cli/internal/iostreams"
 	"github.com/spf13/cobra"
@@ -12,7 +13,11 @@ import (
 
 func NewCmdDecode(ios *iostreams.IOStreams) *cobra.Command {
 	cmd := &cobra.Command{
-		Use: "decode",
+		Use:   "decode",
+		Short: "Convert binary text to readable text",
+		Example: heredoc.Doc(`
+			bintxt decode 01100001 # Output: 'a'
+		`),
 		RunE: func(_ *cobra.Command, args []string) error {
 			return runCmdDecode(args, ios)
 		},

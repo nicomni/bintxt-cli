@@ -7,13 +7,14 @@ Convert utf8-encoded text to binary text, and vice versa.
 ## Features
 
 - [x] Encode text to binary text
-- [ ] Decode binary text to human-readable text
+- [x] Decode binary text to human-readable text
 
 ## Usage
 
 ### Commands
 
-- `encode`: Encode text to binary text
+- `encode`: Convert text to binary text
+- `decode`: Convert binary text to readable text
 
 ### Examples
 
@@ -27,6 +28,18 @@ Output:
 
 ```text
 01101000 01100101 01101100 01101100 01101111
+```
+
+#### Decode binary text
+
+```sh
+bintxt decode 01101000 01100101 01101100 01101100 01101111
+```
+
+Output:
+
+```text
+hello
 ```
 
 ## License
